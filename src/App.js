@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import NavvBar from "./NavvBar";
+import "./App.css";
+import WeatherEngine from "./components/WeatherEngine";
+import Pictures from "./Pictures";
+import Water from "./Water";
+import Calendar from "./Calendar";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div>
+			<NavvBar />
+			<div className="App">
+				<WeatherEngine location="sydney, au" />
+				<Pictures />
+			</div>
+			<Calendar />
+			<Water />
+		</div>
+	);
 }
 
 export default App;
